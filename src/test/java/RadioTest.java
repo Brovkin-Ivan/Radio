@@ -4,6 +4,17 @@ import ru.netology.services.Radio;
 
 public class RadioTest {
     @Test
+    public void validStationTestNew() {
+        Radio radio = new Radio(30);
+
+        radio.setCurrentStation(21);
+
+        int expected = 21;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void validStationTest1() {
         Radio radio = new Radio();
 
